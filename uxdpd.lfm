@@ -1,0 +1,158 @@
+object frmDPD: TfrmDPD
+  Left = 631
+  Height = 600
+  Top = 168
+  Width = 1042
+  Anchors = [akLeft]
+  Caption = 'DPD'
+  ClientHeight = 600
+  ClientWidth = 1042
+  LCLVersion = '3.4.0.0'
+  object pcParam: TPageControl
+    Left = 16
+    Height = 580
+    Top = 0
+    Width = 887
+    ActivePage = tbsOutput
+    TabIndex = 1
+    TabOrder = 0
+    object tbsParam: TTabSheet
+      Caption = 'Paramètres'
+      ClientHeight = 549
+      ClientWidth = 877
+      object EdtNp: TEdit
+        AnchorSideTop.Control = Label1
+        AnchorSideTop.Side = asrBottom
+        AnchorSideBottom.Control = EdtStep
+        Left = 0
+        Height = 34
+        Hint = 'Nbr de Particules'
+        Top = 17
+        Width = 248
+        NumbersOnly = True
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 0
+        Text = '10'
+        TextHint = 'Nbr de Particules'
+        OnChange = EdtNpChange
+      end
+      object EdtStep: TEdit
+        AnchorSideTop.Control = EdtNp
+        AnchorSideTop.Side = asrBottom
+        Left = 0
+        Height = 34
+        Hint = 'Nbr de Pas'
+        Top = 51
+        Width = 248
+        NumbersOnly = True
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 1
+        Text = '1'
+        TextHint = 'Nbr de Pas'
+        OnChange = EdtStepChange
+      end
+      object Label1: TLabel
+        AnchorSideTop.Control = tbsParam
+        AnchorSideBottom.Control = EdtNp
+        Left = 48
+        Height = 17
+        Top = 0
+        Width = 144
+        Caption = 'Paramètres a définirs'
+      end
+      object btOK: TButton
+        AnchorSideTop.Control = EdtStep
+        AnchorSideTop.Side = asrBottom
+        Left = 0
+        Height = 25
+        Top = 85
+        Width = 75
+        Caption = 'OK'
+        TabOrder = 2
+        OnClick = btOKClick
+      end
+    end
+    object tbsOutput: TTabSheet
+      AnchorSideRight.Side = asrCenter
+      AnchorSideBottom.Control = pcParam
+      Caption = 'Graphiques'
+      ClientHeight = 549
+      ClientWidth = 877
+      object ChtViewParticle: TChart
+        AnchorSideBottom.Side = asrBottom
+        Left = -5
+        Height = 352
+        Top = 24
+        Width = 728
+        AxisList = <        
+          item
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelFont.Orientation = 900
+            Title.LabelBrush.Style = bsClear
+          end        
+          item
+            Alignment = calBottom
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelBrush.Style = bsClear
+          end>
+        Extent.UseXMax = True
+        Extent.UseXMin = True
+        Extent.UseYMax = True
+        Extent.UseYMin = True
+        Extent.XMax = 1
+        Extent.XMin = -1
+        Extent.YMax = 1
+        Extent.YMin = -1
+        Title.Text.Strings = (
+          'TAChart'
+        )
+        object ChtViewParticleLineSeries1: TLineSeries
+          LineType = ltNone
+          Pointer.Visible = True
+          ShowPoints = True
+          Source = ChrtSrcParticle
+        end
+      end
+      object mmData: TMemo
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Side = asrBottom
+        Left = 0
+        Height = 128
+        Hint = 'Bonjour, Bienvenue dans notre base de donnée.'#10'Elle est composée de : '#10'- La Position'#10'- La Vitesse'#10'- L''Accelération'
+        Top = 400
+        Width = 536
+        ParentShowHint = False
+        ReadOnly = True
+        ScrollBars = ssAutoVertical
+        TabOrder = 1
+        OnChange = mmDataChange
+      end
+      object Label2: TLabel
+        Left = 255
+        Height = 17
+        Top = 114
+        Width = 45
+        Caption = 'Label2'
+      end
+    end
+  end
+  object Label3: TLabel
+    Left = 73
+    Height = 17
+    Top = -479
+    Width = 45
+    Caption = 'Label3'
+  end
+  object ChrtSrcParticle: TListChartSource
+    DataPoints.Strings = (
+      '||$000000|'
+      '||$000000|'
+    )
+    Left = 944
+    Top = 32
+  end
+end
