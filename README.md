@@ -1,4 +1,4 @@
-DPD Viewer
+DPD Viewer 🇫🇷
 ---
 
 > DPD-Viewer est une application de simulation et de visualisation de systèmes dynamiques de particules. Développée dans le cadre du M1 Chemoinformatique, elle permet de modéliser l'évolution de particules soumises à des contraintes physiques complexes (forces conservatives, dissipatives et aléatoires).
@@ -35,3 +35,39 @@ La simulation repose sur une boucle itérative qui calcule l'évolution du syst�
 - Hugo INGUIMBERTY
 - Directeur de projet : Mr. Gilles MARCOU
 
+---
+---
+DPD Viewer 🇬🇧
+---
+
+> DPD-Viewer is an application for simulating and visualizing dynamic particle systems. Developed as part of the M1 Chemoinformatics program, it allows users to model the behavior of particles subjected to complex physical constraints (conservative, dissipative, and random forces).
+
+---
+**Objectives**
+The objective is to provide an interface capable of simulating the behavior of moving particles and delivering immediate visual feedback through two approaches: 
+- Graphical Display: Real-time dynamic scatter plot via the TChart library.
+- Numerical Display: Precise logging of positions, velocities, and accelerations in a TMemo
+---
+**Technical Operation**
+The simulation is based on an iterative loop that calculates the system’s evolution in three key steps:
+- Verlet Algorithm: Use of the Velocity-Verlet model to calculate trajectories in a stable manner, synchronizing positions, velocities, and accelerations at each time step.
+- Force Modeling (DPD): Calculation of pairwise interactions combining three forces: Conservative (repulsion), Dissipative (damping), and Random (thermal fluctuations).
+- Domain Handling: Integration of Periodic Boundary Conditions (PBC) to simulate an infinite system without boundary effects.
+---
+**Installation & Setup** 
+0. Prerequisites - Lazarus IDE installed on your computer.
+1. Clone the repository or download the source code.
+2. Open Lazarus and load the project via File -> Open by selecting uxDPD.lpr
+3. Compile and run the program (F9)
+4. In the Settings tab, enter the number of particles and the number of time steps.
+5. Click OK to start the simulation.---**Future Developments**
+---
+**Future Developments** 
+- Two-Phase Systems: Handling of mixtures (e.g., water/oil) with specific interactions.
+- Advanced Visualization: Color coding by particle type and 3D rendering.
+- Statistical Analysis: Generation of density maps in real time.
+---
+**Authors**
+- Pierre LE MEUR
+- Hugo INGUIMBERTY
+- Project Director: Mr. Gilles MARCOU
