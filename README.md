@@ -23,7 +23,7 @@ La simulation repose sur une boucle itérative qui calcule l'évolution du syst�
 2. Ouvrez Lazarus et chargez le projet via File -> Open en sélectionnant uxDPD.lpr
 3. Compilez et lancez le programme (F9)
 4. Dans l'onglet Paramètres, saisissez le nombre de particules et le nombre de pas de temps.
-5. Cliquez sur OK pour démarrer la simulation.---**Perspectives d'évolution**
+5. Cliquez sur OK pour démarrer la simulation.
 ---
 **Perspectives d'évolutions** 
 - Systèmes Biphasiques : Gestion de mélanges (ex: eau/huile) avec interactions spécifiques.
@@ -60,7 +60,7 @@ The simulation is based on an iterative loop that calculates the system’s evol
 2. Open Lazarus and load the project via File -> Open by selecting uxDPD.lpr
 3. Compile and run the program (F9)
 4. In the Settings tab, enter the number of particles and the number of time steps.
-5. Click OK to start the simulation.---**Future Developments**
+5. Click OK to start the simulation.---
 ---
 **Future Developments** 
 - Two-Phase Systems: Handling of mixtures (e.g., water/oil) with specific interactions.
